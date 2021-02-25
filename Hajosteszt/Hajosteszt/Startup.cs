@@ -26,18 +26,14 @@ namespace Hajosteszt
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    app.UseHttpsRedirection();
-                    app.UseDefaultFiles();
+            app.UseHttpsRedirection();
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("cv.html");
+            app.UseDefaultFiles(options);
             app.UseStaticFiles();
-                    // await context.Response.WriteAsync("Hello World!");
-                });
-            });
+
+            app.UseRouting();
      
           
         }
