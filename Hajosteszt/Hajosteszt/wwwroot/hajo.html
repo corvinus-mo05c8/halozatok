@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        div {
+            margin: 10px;
+            border: 1px solid blue;
+            border-radius: 25px;
+            padding: 10px;
+        }
+
+        #kulso {
+            height: 100%;
+            flex-direction: column;
+            display: flex;
+            background-color: cornsilk;
+        }
+        #kerdesszoveg {
+            background-color: ghostwhite;
+        }
+
+        #kozepso {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        #valaszok {
+            background-color: ghostwhite;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        #válasz1 {
+            background-color: lightskyblue;
+        }
+        #válasz2 {
+            background-color: lightskyblue;
+        }
+        #válasz3 {
+            background-color: lightskyblue;
+        }
+        #vezerlo {
+            background-color: ghostwhite;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #pic {
+            background-color: ghostwhite;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .gomb {
+            padding: 20px;
+            width: 80px;
+        }
+
+        .kerdes {
+        }
+
+        .gombkattinthato:hover {
+            background-color: steelblue;
+            color: white;
+        }
+        .rosszvalasz {
+        color: red;
+        }
+        .jovalasz {
+        color: greenyellow;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="kulso">
+        <div id="kerdesszoveg">
+            Kérdés szövege
+        </div>
+
+        <div id="kozepso">
+
+            <div id="valaszok">
+
+                <div id="válasz1" class="kerdes">Válasz 1</div>
+                <div id="válasz2" class="kerdes">Válasz 2</div>
+                <div id="válasz3" class="kerdes">Válasz 3</div>
+
+            </div>
+
+            <div id="pic">
+
+                <img id="kep1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" />
+
+            </div>
+
+        </div>
+
+        <div id="vezerlo">
+
+            <div class="gombkattinthato">Vissza</div>
+            <div class="gombkattinthato">Előre</div>
+
+        </div>
+    </div>
+</body>
+</html>
